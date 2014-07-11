@@ -24,10 +24,16 @@ Enter a valid Github Repository URL in the format:
  
  https://github.com/username/reponame/
  
- For Example: https://github.com/hassaanaliw/tmTheme-Creator
- 
  NOTE : the last / is important.
-
+ 
+ For example :
+  
+  If You use             https://github.com/hassaanaliw/GitInfo
+  
+  Commands such as pulse and download won't work.
+  
+  They Will work with :     https://github.com/hassaanaliw/GitInfo/
+  
 The various commands are 
  
        ```forks : Get number of forks```
