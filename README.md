@@ -23,7 +23,10 @@ Enter a valid Github Repository URL in the format:
  
  
  https://github.com/username/reponame/
- Note the last / is important.
+ 
+ For Example: https://github.com/hassaanaliw/tmTheme-Creator
+ 
+ NOTE : the last / is important.
 
 The various commands are 
  
