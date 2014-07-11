@@ -24,6 +24,7 @@ Enter a valid Github Repository URL in the format:
  
  ```https://github.com/username/reponame/```
  
+
 Note the last / is important.
 
 The various commands are 
@@ -37,7 +38,11 @@ The various commands are
        ```download: Downloads master branch as zip```
        ```exit : Exit```
 
-Author
--------
+
+
+
+
+#Author
+
 
 * Hassaan Ali Wattoo
