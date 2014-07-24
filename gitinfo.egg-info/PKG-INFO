@@ -1,8 +1,8 @@
 Metadata-Version: 1.0
 Name: gitinfo
-Version: 1.0.0
+Version: 1.1.0
 Summary: Get information about a repository at Github.com
-Home-page: https://github.com/hassaanaliw/gitinfo
+Home-page: https://github.com/hassaanaliw/GitInfo
 Author: Hassaan Ali Wattoo
 Author-email: hassaanaliw@gmail.com
 License: GPL
@@ -32,22 +32,6 @@ Description: Gitinfo
         Or download the compressed archive, extract it, and inside it run:: 
         
             $ python setup.py install
-        
-        Changelog
-        
-        1.0 (07-25-2014)
-        ------------------
-        
-        - Initial release
-          
-        
-        Contributors
-        ============
-        
-        
-        - Hassaan Ali Wattoo 
-        
-        
         
 Keywords: analytics python github repo statistics
 Platform: UNKNOWN

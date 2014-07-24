@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 
 
-VERSION = '1.0.0'
+VERSION = '1.1.0'
 
 
 setup(
@@ -20,16 +20,16 @@ setup(
     keywords='analytics python github repo statistics',
     license='GPL',
     long_description=(
-        open('README.rst').read() + '\n' + 
-        open(os.path.join('docs', 'HISTORY.txt')).read() + '\n' +
-        open(os.path.join('docs', 'CONTRIBUTORS.txt')).read()
+        open('README.rst').read()
+
+
     ),
     name='gitinfo',
     py_modules=[
         'gitinfo',
     ],
 
-    url='https://github.com/hassaanaliw/gitinfo',
+    url='https://github.com/hassaanaliw/GitInfo',
     version=VERSION,
     zip_safe=True,
 )
