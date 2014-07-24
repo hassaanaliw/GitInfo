@@ -1,0 +1,54 @@
+Metadata-Version: 1.0
+Name: gitinfo
+Version: 1.0.0
+Summary: Get information about a repository at Github.com
+Home-page: https://github.com/hassaanaliw/gitinfo
+Author: Hassaan Ali Wattoo
+Author-email: hassaanaliw@gmail.com
+License: GPL
+Description: Gitinfo
+        ======
+        
+        
+        
+        Get Repo statistics from GITHUB.
+        
+        Usage
+        -----
+        
+        Enter the author name followed by the repo name. ::
+        
+            $ gitinfo rg3 youtube-dl
+            
+        Installation
+        ------------
+        
+        Install via::
+        
+            $ pip install gitinfo
+        
+        
+        
+        Or download the compressed archive, extract it, and inside it run:: 
+        
+            $ python setup.py install
+        
+        Changelog
+        
+        1.0 (07-25-2014)
+        ------------------
+        
+        - Initial release
+          
+        
+        Contributors
+        ============
+        
+        
+        - Hassaan Ali Wattoo 
+        
+        
+        
+Keywords: analytics python github repo statistics
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
