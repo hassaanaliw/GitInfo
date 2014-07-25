@@ -2,6 +2,7 @@ import urllib2
 from BeautifulSoup import BeautifulSoup
 import sys
 import argparse
+import re
 
 def gitinfo():
     parser = argparse.ArgumentParser()
@@ -48,11 +49,16 @@ def gitinfo():
     soup = BeautifulSoup(rw)
     b = soup.findAll("span",{'class':'num'})
 
-
     merged = str(b[2]).split()[5]
     proposed = str(b[3]).split()[5]
     closed = str(b[4]).split()[5]
     new = str(b[5]).split()[5]
+
+
+
+
+
+
 
     print("\nName : %s" %repository.split('/')[4])
     print("Author : %s" % repository.split('/')[3])
@@ -71,6 +77,39 @@ def gitinfo():
           "%s Branches\n"
           "%s Commits\n"
           "%s Releases\n"%(contributors,branches,commits,releases))
+    print("Finding Latest Issue\n")
+
+    GitIssues(args.author,args.reponame)
+
+
+def GitIssues(author,repo):
+
+    issues = urllib2.urlopen("https://github.com/%s/%s/issues/" %(author,repo)).read()
+    soup = BeautifulSoup(issues)
+
+    try : soup.findAll("span",{'class':'list-group-item-number'})[0]
+    except IndexError: print("ERROR! This Repo has 0 issues.")
+    else:
+        h = (str(soup.findAll("span",{'class':'list-group-item-number'})[0]))
+
+        valid = r'<span(.*?)>(.*)</span>'
+        num = (re.match(valid,h).group(2)).replace('#',"")
+
+        fin = urllib2.urlopen("https://github.com/%s/%s/issues/%s" %(author,repo,num)).read()
+        title = BeautifulSoup(fin)
+
+        name = str(title.find("a",{'class':'author'}))
+        reg = r'<a.*?>(.*)</a>'
+        issueaut = (re.match(reg,name).group(1))
+
+
+        for d in title.findAll("title"):
+            issuename = (d.contents[0])
+
+
+        print("Issue Title = %s\n" %issuename[:-6])
+        print("Issue Author = %s\n" % issueaut)
+
 
 
 
