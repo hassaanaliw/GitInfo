@@ -54,8 +54,8 @@ def gitinfo():
     closed = str(b[4]).split()[5]
     new = str(b[5]).split()[5]
 
-    print("\nName : %s" %repository.split('/')[4])
-    print("Author : %s" % repository.split('/')[3])
+    print("\nName : %s" % args.reponame)
+    print("Author : %s" % args.author)
 
     print("\nThis repository has been starred %s time(s)\n"% str(stars.replace("\n",'')))
     print("%s Person(s) have forked this repo\n"% str(forks.replace("\n",'')))
